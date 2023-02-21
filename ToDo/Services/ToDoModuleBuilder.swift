@@ -13,7 +13,7 @@ protocol ModuleBuilder {
 
 class ToDoModuleBuilder: ModuleBuilder {
 	
-	static func build() -> UIViewController{
+	static func build() -> UIViewController {
 		let taskManager: ITaskManager = OrderedTaskManager(taskManager: TaskManager())
 		let repository: ITaskRepository = TaskRepositoryStub()
 		let sectionForTaskManager: ITaskManagerSectionsAdapter!
