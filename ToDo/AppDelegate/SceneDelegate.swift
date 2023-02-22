@@ -19,15 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		let window = UIWindow(windowScene: windowScene)
 		
-		let toDoModule = ToDoModuleBuilder.build()
+//		let toDoModule = ToDoModuleBuilder.build()
+		let loginModule = LoginViewController()
 		
-		let navigation = UINavigationController(rootViewController: toDoModule)
+//		let navigation = UINavigationController(rootViewController: toDoModule)
+		let navigation = UINavigationController(rootViewController: loginModule)
 		let appearance = UINavigationBarAppearance()
 
 		navigation.navigationBar.scrollEdgeAppearance = appearance
 		appearance.backgroundColor = .lightGray
 
-		window.rootViewController = navigation
+//		window.rootViewController = navigation
+		window.rootViewController = loginModule
 		window.makeKeyAndVisible()
 		self.window = window
 	}

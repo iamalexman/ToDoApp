@@ -11,6 +11,13 @@
 		5E7D9DAA29A25D4900D025FE /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DA929A25D4900D025FE /* ToDoPresenter.swift */; };
 		5E7D9DAC29A25E4500D025FE /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DAB29A25E4500D025FE /* ViewData.swift */; };
 		5E7D9DAE29A274E400D025FE /* DataPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DAD29A274E400D025FE /* DataPreparator.swift */; };
+		5E7D9DFD29A57F7300D025FE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DF729A57F7300D025FE /* LoginPresenter.swift */; };
+		5E7D9DFE29A57F7300D025FE /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DF829A57F7300D025FE /* LoginWorker.swift */; };
+		5E7D9DFF29A57F7300D025FE /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DF929A57F7300D025FE /* LoginRouter.swift */; };
+		5E7D9E0029A57F7300D025FE /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DFA29A57F7300D025FE /* LoginModels.swift */; };
+		5E7D9E0129A57F7300D025FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DFB29A57F7300D025FE /* LoginViewController.swift */; };
+		5E7D9E0229A57F7300D025FE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D9DFC29A57F7300D025FE /* LoginInteractor.swift */; };
+		5E7D9E0529A58C6100D025FE /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7D9E0729A58C6100D025FE /* LoginStoryboard.storyboard */; };
 		5E9D08D42997C79100F7B64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D08D32997C79100F7B64A /* AppDelegate.swift */; };
 		5E9D08D62997C79100F7B64A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D08D52997C79100F7B64A /* SceneDelegate.swift */; };
 		5E9D08DD2997C79200F7B64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9D08DC2997C79200F7B64A /* Assets.xcassets */; };
@@ -29,6 +36,13 @@
 		5E7D9DA929A25D4900D025FE /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
 		5E7D9DAB29A25E4500D025FE /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		5E7D9DAD29A274E400D025FE /* DataPreparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPreparator.swift; sourceTree = "<group>"; };
+		5E7D9DF729A57F7300D025FE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		5E7D9DF829A57F7300D025FE /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		5E7D9DF929A57F7300D025FE /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		5E7D9DFA29A57F7300D025FE /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		5E7D9DFB29A57F7300D025FE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5E7D9DFC29A57F7300D025FE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		5E7D9E0629A58C6100D025FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		5E9D08D02997C79100F7B64A /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9D08D32997C79100F7B64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E9D08D52997C79100F7B64A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +85,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5E7D9DF529A57D5100D025FE /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				5E7D9DA829A25D3700D025FE /* Model */,
+				5E7D9DA729A25D2F00D025FE /* Presenter */,
+				5E9D08EF2997CA5B00F7B64A /* View */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		5E7D9DF629A57D7200D025FE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5E7D9DF729A57F7300D025FE /* LoginPresenter.swift */,
+				5E7D9DF829A57F7300D025FE /* LoginWorker.swift */,
+				5E7D9DF929A57F7300D025FE /* LoginRouter.swift */,
+				5E7D9DFA29A57F7300D025FE /* LoginModels.swift */,
+				5E7D9DFB29A57F7300D025FE /* LoginViewController.swift */,
+				5E7D9DFC29A57F7300D025FE /* LoginInteractor.swift */,
+				5E7D9E0729A58C6100D025FE /* LoginStoryboard.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		5E9D08C72997C79100F7B64A = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +148,9 @@
 		5E9D08EC2997CA2F00F7B64A /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				5E7D9DA829A25D3700D025FE /* Model */,
-				5E7D9DA729A25D2F00D025FE /* Presenter */,
+				5E7D9DF629A57D7200D025FE /* Login */,
+				5E7D9DF529A57D5100D025FE /* ToDoList */,
 				5E9D08FB2997E85400F7B64A /* Protocols */,
-				5E9D08EF2997CA5B00F7B64A /* View */,
 				5EF03A18299BEC9F0078F8B3 /* Extensions */,
 			);
 			path = ToDo;
@@ -224,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7D9E0529A58C6100D025FE /* LoginStoryboard.storyboard in Resources */,
 				5E9D08E02997C79200F7B64A /* LaunchScreen.storyboard in Resources */,
 				5E9D08DD2997C79200F7B64A /* Assets.xcassets in Resources */,
 			);
@@ -236,14 +274,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7D9E0129A57F7300D025FE /* LoginViewController.swift in Sources */,
+				5E7D9E0229A57F7300D025FE /* LoginInteractor.swift in Sources */,
 				5EF03A2229A102C50078F8B3 /* TaskManagerSectionsAdapter.swift in Sources */,
 				5EF03A2029A0FECC0078F8B3 /* OrderedTaskManager.swift in Sources */,
+				5E7D9DFD29A57F7300D025FE /* LoginPresenter.swift in Sources */,
 				5E7D9DAE29A274E400D025FE /* DataPreparator.swift in Sources */,
 				5EF03A1E29A0FE100078F8B3 /* ITaskManager.swift in Sources */,
+				5E7D9DFE29A57F7300D025FE /* LoginWorker.swift in Sources */,
+				5E7D9DFF29A57F7300D025FE /* LoginRouter.swift in Sources */,
 				5E7D9DA629A25A0900D025FE /* ToDoModuleBuilder.swift in Sources */,
 				5E9D08D42997C79100F7B64A /* AppDelegate.swift in Sources */,
 				5E9D08D62997C79100F7B64A /* SceneDelegate.swift in Sources */,
 				5E7D9DAA29A25D4900D025FE /* ToDoPresenter.swift in Sources */,
+				5E7D9E0029A57F7300D025FE /* LoginModels.swift in Sources */,
 				5EF03A15299BD5290078F8B3 /* Repository.swift in Sources */,
 				5EF03A2529A1189A0078F8B3 /* ToDoTableViewController.swift in Sources */,
 				5EF03A17299BEC9A0078F8B3 /* Extensions.swift in Sources */,
@@ -255,6 +299,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5E7D9E0729A58C6100D025FE /* LoginStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E7D9E0629A58C6100D025FE /* Base */,
+			);
+			name = LoginStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
 		5E9D08DE2997C79200F7B64A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
