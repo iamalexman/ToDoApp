@@ -20,16 +20,7 @@ final class ToDoTableViewController: UITableViewController {
 		title = "ToDoList"
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		
-		assembly()
 		presenter?.viewIsReady()
-	}
-	
-	private func assembly() {
-		let taskManager = OrderedTaskManager(taskManager: TaskManager())
-		let repository: ITaskRepository = TaskRepositoryStub()
-		taskManager.addTasks(tasks: repository.getTasks())
-		let sections = TaskManagerSectionsAdapter(taskManager: taskManager)
-		presenter = ToDoPresenter(view: self, sectionManager: sections)
 	}
 	
 	// MARK: - Table view data source

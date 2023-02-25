@@ -18,8 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
 		let window = UIWindow(windowScene: windowScene)
-		let view = ToDoTableViewController()
-		let navigation = UINavigationController(rootViewController: view)
+		let navigation = UINavigationController(rootViewController: assembly())
 		let appearance = UINavigationBarAppearance()
 		
 		navigation.navigationBar.scrollEdgeAppearance = appearance
@@ -28,6 +27,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window.rootViewController = navigation
 		window.makeKeyAndVisible()
 		self.window = window
+	}
+	
+	func assembly() -> UIViewController {
+		let view = ToDoTableViewController()
+		
+		let taskManager = OrderedTaskManager(taskManager: TaskManager())
+		let repository: ITaskRepository = TaskRepositoryStub()
+		taskManager.addTasks(tasks: repository.getTasks())
+		let sections = TaskManagerSectionsAdapter(taskManager: taskManager)
+		let presenter = ToDoPresenter(view: view, sectionManager: sections)
+		view.presenter = presenter
+		return view
 	}
 	
 	func sceneDidDisconnect(_ scene: UIScene) { }
