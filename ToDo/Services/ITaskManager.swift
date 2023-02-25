@@ -7,7 +7,6 @@
 
 /// Base protocol for working wiwth tasks
 protocol ITaskManager {
-	func addTask(task: Task)
 	func addTasks(tasks: [Task])
 	func allTasks() -> [Task]
 	func completedTasks() -> [Task]
@@ -15,3 +14,16 @@ protocol ITaskManager {
 }
 
 extension TaskManager: ITaskManager { }
+
+extension ImportantTask.TaskPriority: CustomStringConvertible {
+	var description: String {
+		switch self {
+		case .high:
+			return "!!!"
+		case .medium:
+			return "!!"
+		case .low:
+			return "!"
+		}
+	}
+}

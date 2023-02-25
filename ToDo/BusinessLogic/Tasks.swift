@@ -1,8 +1,8 @@
 //
-//  TaskManager.swift
+//  Tasks.swift
 //  ToDo
 //
-//  Created by Alex Smith on 11.02.2023.
+//  Created by Alex Smith on 25.02.2023.
 //
 
 import Foundation
@@ -42,34 +42,5 @@ final class ImportantTask: Task {
 	init(title: String, taskPriority: TaskPriority) {
 		self.taskPriority = taskPriority
 		super.init(title: title)
-	}
-}
-
-final class TaskManager {
-	
-	private var taskList = [Task]()
-	
-	func allTasks() -> [Task] {
-		taskList
-	}
-	
-	func completedTasks() -> [Task] {
-		taskList.filter { $0.completed }
-	}
-	
-	func uncompletedTasks() -> [Task] {
-		taskList.filter { !$0.completed }
-	}
-	
-	func addTask(task: Task) {
-		taskList.append(task)
-	}
-	
-	func addTasks(tasks: [Task]) {
-		taskList.append(contentsOf: tasks)
-	}
-	
-	func removeTask(task: Task) {
-		taskList.removeAll { $0 === task }
 	}
 }

@@ -14,10 +14,6 @@ final class OrderedTaskManager: ITaskManager {
 		self.taskManager = taskManager
 	}
 	
-	func addTask(task: Task) {
-		taskManager.addTask(task: task)
-	}
-	
 	func addTasks(tasks: [Task]) {
 		taskManager.addTasks(tasks: tasks)
 	}
